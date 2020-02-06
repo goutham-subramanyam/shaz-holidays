@@ -1,0 +1,18 @@
+.owl-dots {
+  @include flexbox();
+  @include flex-direction(row);
+  @include justify-content(center);
+  @include align-items(center);
+  @include margin(16px 0);
+  button {
+    width: 10px;
+    height: 10px;
+    background: rgba($sh-color--black, 0.2) !important;
+    border-radius: 100%;
+    @include margin(0 6px);
+
+    &.active, &:hover {
+      background: $sh-color--black !important;
+    }
+  }
+}

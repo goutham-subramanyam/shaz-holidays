@@ -1,4 +1,73 @@
-/* Home
-* ===============
-*
-* Place all your home page declarations here */
+.sh-home-banner--wrapper {
+  width: 100%;
+  @include padding($navbar-height 32px 0);
+
+  @include viewport(tablet) {
+    @include padding(0);
+  }
+
+  img {
+    border-radius: $border-radius-sm;
+  }
+}
+
+.sh-home--section {
+  @include padding(72px 0);
+  @include viewport(tablet) {
+    @include padding(40px 0);
+  }
+
+  .sh-package--info {
+    @include flexbox();
+    @include flex-direction(row);
+    @include justify-content(space-between);
+    @include align-items(flex-end);
+    @include flex-wrap(wrap);
+    
+    @include viewport(tablet) {
+      @include padding(24px null null);
+    }
+
+    .sh-package--item {
+      width: calc(25% - 16px);
+      @include viewport(xs-mob) {
+        width: calc(50% - 16px);
+      }
+
+      .sh-package--preview {
+        height: 200px;
+        border-radius: $border-radius-base;
+        overflow: hidden;
+        position: relative;
+
+        @include viewport(desk) {
+          height: 232px;
+        }
+
+        @include viewport(tablet) {
+          height: 232px;
+        }
+
+        &.sh-package--preview-large {
+          height: 240px;
+
+          @include viewport(tablet) {
+            height: 232px;
+          }
+
+          @include viewport(desk) {
+            height: 280px;
+          }
+        }        
+        img {
+          position: absolute;
+          left: 0;
+          top: 0;
+          width: auto;
+          min-height: 100%;
+        }
+
+      }
+    }
+  }
+}

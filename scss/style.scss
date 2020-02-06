@@ -18,7 +18,9 @@
 
 @import 'base/buttons';
 @import 'base/forms';
-@import 'base/navbar';
+
+@import 'components/carousel';
+@import 'components/navbar';
 
 @import "navigation";
 @import "utilities";
@@ -30,4 +32,27 @@
 
 body {
   font-family: $base-font-family;
+
+  *:focus {
+    outline: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .container, .container-lg, .container-md, .container-sm, .container-xl {
+    max-width: 95%;
+  }
+}
+
+
+@media (min-width: 992px) and (max-width: 1440px) {
+  .container, .container-lg, .container-md, .container-sm, .container-xl {
+    max-width: 95%;
+  }
+}
+
+@media (min-width: 1440px) {
+  .container, .container-lg, .container-md, .container-sm, .container-xl {
+    max-width: 1280px;
+  }
 }

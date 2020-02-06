@@ -1,16 +1,18 @@
 .navbar {
-  @include padding(16px null);
-
-  &.navbar-fixed {
-    box-shadow: 0 1px 6px rgba(38, 38, 39, 0.05);
-    -moz-box-shadow: 0 1px 6px rgba(38, 38, 39, 0.05);
-    -webkit-box-shadow: 0 1px 6px rgba(38, 38, 39, 0.05);
-  }
+  position: fixed;
+  width: 100%;
+  transition: all 0.3s;
+  top: 0;
+  left: 0;
+  background-color: $sh-color--white;
+  z-index: 10;
+  box-shadow: 0 1px 6px rgba(38, 38, 39, .05);
+  -moz-box-shadow: 0 1px 6px rgba(38, 38, 39, .05);
+  -webkit-box-shadow: 0 1px 6px rgba(38, 38, 39, .05);
+  @include padding(16px 32px 24px);
 
   @include viewport(tablet) {
-    box-shadow: 0 1px 6px rgba(38, 38, 39, 0.05);
-    -moz-box-shadow: 0 1px 6px rgba(38, 38, 39, 0.05);
-    -webkit-box-shadow: 0 1px 6px rgba(38, 38, 39, 0.05);
+    @include padding(16px);
   }
 
   .navbar-brand {

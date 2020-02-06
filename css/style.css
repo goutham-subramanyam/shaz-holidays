@@ -433,6 +433,24 @@ template {
   display: none;
 }
 
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  font-weight: normal;
+}
+
+.sh--title {
+  font-size: 40px;
+}
+
+.sh--heading {
+  font-size: 20px;
+}
+
+p, .sh--content {
+  font-size: 16px;
+  line-height: 1.618;
+}
+
 .sh-button {
   border-radius: 0px;
   border: thin solid transparent;
@@ -459,22 +477,51 @@ template {
   color: #ffffff;
 }
 
-.navbar {
-  padding-top: 16px;
-  padding-bottom: 16px;
+.owl-dots {
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -moz-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -ms-flex-pack: center;
+  -moz-justify-content: center;
+  justify-content: center;
+  -ms-flex-align: center;
+  -moz-align-items: center;
+  align-items: center;
+  margin: 16px 0;
 }
 
-.navbar.navbar-fixed {
+.owl-dots button {
+  width: 10px;
+  height: 10px;
+  background: rgba(31, 32, 32, 0.2) !important;
+  border-radius: 100%;
+  margin: 0 6px;
+}
+
+.owl-dots button.active, .owl-dots button:hover {
+  background: #1f2020 !important;
+}
+
+.navbar {
+  position: fixed;
+  width: 100%;
+  transition: all 0.3s;
+  top: 0;
+  left: 0;
+  background-color: #ffffff;
+  z-index: 10;
   box-shadow: 0 1px 6px rgba(38, 38, 39, 0.05);
   -moz-box-shadow: 0 1px 6px rgba(38, 38, 39, 0.05);
   -webkit-box-shadow: 0 1px 6px rgba(38, 38, 39, 0.05);
+  padding: 16px 32px 24px;
 }
 
 @media screen and (max-width: 991px) {
   .navbar {
-    box-shadow: 0 1px 6px rgba(38, 38, 39, 0.05);
-    -moz-box-shadow: 0 1px 6px rgba(38, 38, 39, 0.05);
-    -webkit-box-shadow: 0 1px 6px rgba(38, 38, 39, 0.05);
+    padding: 16px;
   }
 }
 
@@ -1400,16 +1447,135 @@ template {
   vertical-align: text-bottom;
 }
 
-/* Home
-* ===============
-*
-* Place all your home page declarations here */
+.sh-home-banner--wrapper {
+  width: 100%;
+  padding: 90px 32px 0;
+}
+
+@media screen and (max-width: 991px) {
+  .sh-home-banner--wrapper {
+    padding: 0;
+  }
+}
+
+.sh-home-banner--wrapper img {
+  border-radius: 3px;
+}
+
+.sh-home--section {
+  padding: 72px 0;
+}
+
+@media screen and (max-width: 991px) {
+  .sh-home--section {
+    padding: 40px 0;
+  }
+}
+
+.sh-home--section .sh-package--info {
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -moz-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -ms-flex-pack: justify;
+  -moz-justify-content: space-between;
+  justify-content: space-between;
+  -ms-flex-align: end;
+  -moz-align-items: flex-end;
+  align-items: flex-end;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+@media screen and (max-width: 991px) {
+  .sh-home--section .sh-package--info {
+    padding-top: 24px;
+  }
+}
+
+.sh-home--section .sh-package--info .sh-package--item {
+  width: calc(25% - 16px);
+}
+
+@media screen and (max-width: 479px) {
+  .sh-home--section .sh-package--info .sh-package--item {
+    width: calc(50% - 16px);
+  }
+}
+
+.sh-home--section .sh-package--info .sh-package--item .sh-package--preview {
+  height: 200px;
+  border-radius: 4px;
+  overflow: hidden;
+  position: relative;
+}
+
+@media screen and (min-width: 1200px) {
+  .sh-home--section .sh-package--info .sh-package--item .sh-package--preview {
+    height: 232px;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .sh-home--section .sh-package--info .sh-package--item .sh-package--preview {
+    height: 232px;
+  }
+}
+
+.sh-home--section .sh-package--info .sh-package--item .sh-package--preview.sh-package--preview-large {
+  height: 240px;
+}
+
+@media screen and (max-width: 991px) {
+  .sh-home--section .sh-package--info .sh-package--item .sh-package--preview.sh-package--preview-large {
+    height: 232px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .sh-home--section .sh-package--info .sh-package--item .sh-package--preview.sh-package--preview-large {
+    height: 280px;
+  }
+}
+
+.sh-home--section .sh-package--info .sh-package--item .sh-package--preview img {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: auto;
+  min-height: 100%;
+}
+
 /* Footer
 * ===============
 *
 * Place all your footer declarations here */
 body {
   font-family: "Work Sans", sans-serif;
+}
+
+body *:focus {
+  outline: none;
+}
+
+@media (max-width: 768px) {
+  .container, .container-lg, .container-md, .container-sm, .container-xl {
+    max-width: 95%;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1440px) {
+  .container, .container-lg, .container-md, .container-sm, .container-xl {
+    max-width: 95%;
+  }
+}
+
+@media (min-width: 1440px) {
+  .container, .container-lg, .container-md, .container-sm, .container-xl {
+    max-width: 1280px;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
