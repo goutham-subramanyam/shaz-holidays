@@ -1,0 +1,76 @@
+.navbar {
+  @include padding(16px null);
+
+  &.navbar-fixed {
+    box-shadow: 0 1px 6px rgba(38, 38, 39, 0.05);
+    -moz-box-shadow: 0 1px 6px rgba(38, 38, 39, 0.05);
+    -webkit-box-shadow: 0 1px 6px rgba(38, 38, 39, 0.05);
+  }
+
+  @include viewport(tablet) {
+    box-shadow: 0 1px 6px rgba(38, 38, 39, 0.05);
+    -moz-box-shadow: 0 1px 6px rgba(38, 38, 39, 0.05);
+    -webkit-box-shadow: 0 1px 6px rgba(38, 38, 39, 0.05);
+  }
+
+  .navbar-brand {
+    @include margin(0 24px 0 0);
+  }
+
+  .navbar-nav {
+    .nav-item {
+      .nav-link {
+        @include margin(0 16px);
+        @include padding(4px 0);
+        transition: all 0.3s;
+        border-bottom: 2px solid transparent;
+
+        @include viewport(tablet) {
+          display: inline-block;
+          @include margin(16px 0 0);
+        }
+      }
+
+      &:hover,
+      &:active,
+      &:focus,
+      &.active {
+        .nav-link {
+          border-bottom: 2px solid $sh-color--red;
+        }
+      }
+    }
+  }
+
+  .navbar-right {
+    @include flexbox();
+    @include flex-direction(row);
+    @include justify-content(flex-start);
+    @include align-items(center);
+    @include viewport(tablet) {
+      @include flex-direction(column);
+      @include align-items(flex-start);
+      
+      .sh-social--item {
+        @include margin(0 32px 0 0);
+      }
+    }
+
+    .sh-social--row {
+      @include min-max(991, 1100) {
+        display: none !important;
+      }
+      
+      @include viewport(tablet) {
+        @include margin(32px 0);
+      }
+    }
+
+    .sh-button {
+      @include margin(0 0 0 16px);
+      @include viewport(tablet) {
+        @include margin(0 0 16px);
+      }
+    }
+  }
+}

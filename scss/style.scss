@@ -12,11 +12,13 @@
 @import "mixins/margin";
 @import "mixins/padding";
 @import "mixins/media_query";
+@import "mixins/flex";
 
 @import "typography";
 
 @import 'base/buttons';
 @import 'base/forms';
+@import 'base/navbar';
 
 @import "navigation";
 @import "utilities";
