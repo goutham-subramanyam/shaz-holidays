@@ -158,4 +158,19 @@
       }
     }
   }
+
+  .sh-card--wrapper {
+    .sh-card--item {
+      svg {
+        @include margin(0 16px 0 0);
+
+        &:last-child {
+          @include margin(0);
+        }
+        &.disabled {
+          opacity: 0.5;
+        }
+      }
+    }
+  }
 }

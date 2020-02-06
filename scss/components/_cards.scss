@@ -1,0 +1,33 @@
+.sh-card--wrapper {
+  @include flexbox();
+  @include flex-direction(row);
+  @include justify-content(center);
+  @include align-items(center);
+  @include flex-wrap(wrap);
+  .sh-card--item {
+    width: calc(33% - 24px);
+    border: 1px solid $sh-color--border;
+    box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.13);
+    transition: all 0.3s;
+    cursor: pointer;
+    @include margin(0 12px);
+
+    &:hover {
+      box-shadow: -17px 4px 65px rgba(0, 0, 0, 0.13);
+    }
+
+    @include viewport(mob) {
+      width: 100%;
+      @include margin(0 0 32px);
+
+      &:last-child {
+        @include margin(0);
+      }
+    }
+
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+}
