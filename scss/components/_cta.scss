@@ -1,0 +1,13 @@
+.sh-cta--wrapper {
+  background-image: url('https://static.surveysparrow.com/site/assets/temporary/travel/cta-background.png');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-color: black;
+  @include margin(64px 0 0);
+  @include padding(128px 0);
+
+  .sh-button {
+    @include padding(null 48px);
+  }
+}

@@ -3,7 +3,7 @@
   @include padding($navbar-height 32px 32px);
 
   @include viewport(tablet) {
-    @include padding(0);
+    @include padding(null 0 16px);
   }
 
   img {

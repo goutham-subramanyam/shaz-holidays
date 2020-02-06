@@ -1,4 +1,29 @@
-/* Footer
-* ===============
-*
-* Place all your footer declarations here */
+footer {
+  background-color: $sh-color--env;
+  @include padding(64px 0);
+
+  @include viewport(mob) {
+    * {
+      text-align: center;
+    }
+  }
+
+  a {
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: normal;
+    color: rgba($sh-color--black, 0.7);
+    transition: all 0.3s;
+    text-decoration: none;
+    @include margin(0 0 8px);
+
+    &:hover {
+      color: $sh-color--black;
+      text-decoration: none;
+    }
+
+    @include viewport(mob) {
+      font-weight: 14px;
+    }
+  }
+}

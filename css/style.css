@@ -438,6 +438,16 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: normal;
 }
 
+.sh--56 {
+  font-size: 56px;
+}
+
+@media screen and (max-width: 767px) {
+  .sh--56 {
+    font-size: 48px;
+  }
+}
+
 .sh--40 {
   font-size: 40px;
 }
@@ -511,6 +521,19 @@ p {
 
 .sh--thin {
   font-weight: 300;
+}
+
+.sh--semibold {
+  font-weight: 600;
+}
+
+.sh--white {
+  color: #ffffff;
+}
+
+.sh--uppercase {
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
 }
 
 .sh-button {
@@ -712,6 +735,21 @@ p {
 .sh-card--wrapper .sh-card--item img {
   width: 100%;
   height: auto;
+}
+
+.sh-cta--wrapper {
+  background-image: url("https://static.surveysparrow.com/site/assets/temporary/travel/cta-background.png");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-color: black;
+  margin: 64px 0 0;
+  padding: 128px 0;
+}
+
+.sh-cta--wrapper .sh-button {
+  padding-right: 48px;
+  padding-left: 48px;
 }
 
 /* Fonts
@@ -1570,7 +1608,9 @@ p {
 
 @media screen and (max-width: 991px) {
   .sh-home-banner--wrapper {
-    padding: 0;
+    padding-right: 0;
+    padding-bottom: 16px;
+    padding-left: 0;
   }
 }
 
@@ -1802,10 +1842,38 @@ p {
   opacity: 0.5;
 }
 
-/* Footer
-* ===============
-*
-* Place all your footer declarations here */
+footer {
+  background-color: #E5E5E5;
+  padding: 64px 0;
+}
+
+@media screen and (max-width: 767px) {
+  footer * {
+    text-align: center;
+  }
+}
+
+footer a {
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: normal;
+  color: rgba(31, 32, 32, 0.7);
+  transition: all 0.3s;
+  text-decoration: none;
+  margin: 0 0 8px;
+}
+
+footer a:hover {
+  color: #1f2020;
+  text-decoration: none;
+}
+
+@media screen and (max-width: 767px) {
+  footer a {
+    font-weight: 14px;
+  }
+}
+
 body {
   font-family: "Work Sans", sans-serif;
 }

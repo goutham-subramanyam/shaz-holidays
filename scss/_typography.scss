@@ -3,6 +3,13 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: normal;
 }
 
+.sh--56 {
+  font-size: 56px;
+  @include viewport(mob) {
+    font-size: 48px;
+  }
+}
+
 .sh--40 {
   font-size: 40px;
   @include viewport(mob) {
@@ -54,5 +61,18 @@ p {
 }
 
 .sh--thin {
-  font-weight: 300;
+  font-weight: $font-weight-thin;
+}
+
+.sh--semibold {
+  font-weight: $font-weight-semibold;
+}
+
+.sh--white {
+  color: $sh-color--white;
+}
+
+.sh--uppercase {
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
 }
