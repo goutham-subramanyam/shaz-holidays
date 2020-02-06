@@ -1,0 +1,31 @@
+@charset 'UTF-8';
+
+@import "variables";
+
+// Vendors
+@import 'vendor/normalize';
+
+//Mixins
+@import "mixins/directional-property";
+@import "mixins/compact-shorthand";
+@import "mixins/contains-falsy";
+@import "mixins/margin";
+@import "mixins/padding";
+@import "mixins/media_query";
+
+@import "typography";
+
+@import 'base/buttons';
+@import 'base/forms';
+
+@import "navigation";
+@import "utilities";
+
+//Page-specific styles
+@import 'pages/home';
+
+@import "footer";
+
+body {
+  font-family: $base-font-family;
+}
