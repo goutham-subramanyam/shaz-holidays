@@ -21,3 +21,12 @@
     color: $sh-color--white;
   }
 }
+
+.sh-button--secondary {
+  background-color: $sh-color--grey;
+  color: $sh-color--black;
+
+  &:hover {
+    color: $sh-color--black;
+  }
+}

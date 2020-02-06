@@ -3,15 +3,32 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: normal;
 }
 
-.sh--title {
+.sh--40 {
   font-size: 40px;
+  @include viewport(mob) {
+    font-size: 32px;
+  }
 }
 
-.sh--heading {
+.sh--32 {
+  font-size: 32px;
+  @include viewport(mob) {
+    font-size: 24px;
+  }
+}
+
+.sh--20 {
   font-size: 20px;
+  @include viewport(mob) {
+    font-size: 18px;
+  }
 }
 
-p, .sh--content {
+
+p, .sh--16 {
   font-size: 16px;
   line-height: 1.618;
+  @include viewport(mob) {
+    font-size: 14px;
+  }
 }
