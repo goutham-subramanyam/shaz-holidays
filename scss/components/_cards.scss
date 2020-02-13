@@ -4,12 +4,23 @@
   @include justify-content(center);
   @include align-items(center);
   @include flex-wrap(wrap);
+
+  &.sh-card--wrapper--4 {
+    .sh-card--item {
+      width: calc(25% - 24px);
+      @include viewport(mob) {
+        width: 100%;
+      }
+    }
+  }
   .sh-card--item {
     width: calc(33% - 24px);
     border: 1px solid $sh-color--border;
+    border-radius: $border-radius-base;
     box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.13);
     transition: all 0.3s;
     cursor: pointer;
+    overflow: hidden;
     @include margin(0 12px);
 
     &:hover {
@@ -28,6 +39,17 @@
     img {
       width: 100%;
       height: auto;
+    }
+
+    &.sh-card--item-full {
+      width: 100%;
+      @include margin(0 0 24px);
+    }
+
+    .sh-list {
+      li {
+        @include margin(null null 4px);
+      }
     }
   }
 }

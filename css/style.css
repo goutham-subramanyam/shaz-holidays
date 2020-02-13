@@ -468,6 +468,16 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
+.sh--24 {
+  font-size: 24px;
+}
+
+@media screen and (max-width: 767px) {
+  .sh--24 {
+    font-size: 20px;
+  }
+}
+
 .sh--20 {
   font-size: 20px;
 }
@@ -531,12 +541,50 @@ p {
   color: #ffffff;
 }
 
+.sh--blue {
+  color: #0094FF;
+}
+
 .sh--uppercase {
   text-transform: uppercase;
   letter-spacing: 0.5px;
 }
 
+.sh--strike {
+  text-decoration: line-through;
+}
+
+.sh-list {
+  padding: 0 0 0 16px;
+  margin: 0;
+}
+
+.sh-list li {
+  font-weight: 400;
+  color: #1f2020;
+  line-height: 1.6;
+  font-size: inherit;
+  margin: 0 0 8px 8px;
+}
+
+.sh-list li:before {
+  display: none;
+}
+
+.sh-list li:last-child {
+  margin-bottom: 0px !important;
+}
+
+.sh-list--unordered li {
+  list-style: disc;
+}
+
+.sh-list--ordered li {
+  list-style: decimal;
+}
+
 .sh-button {
+  display: inline-block;
   border-radius: 0px;
   border: thin solid transparent;
   font-size: 16px;
@@ -569,6 +617,30 @@ p {
 
 .sh-button--secondary:hover {
   color: #1f2020;
+}
+
+.sh-button--border {
+  background-color: #ffffff;
+  color: #1f2020;
+  border: 2px solid #1f2020;
+}
+
+.sh-button--border:hover {
+  color: #1f2020;
+}
+
+.sh-link {
+  display: inline-block;
+  color: #1f2020;
+  text-decoration: none;
+  transition: all 0.3s;
+}
+
+.sh-link:hover {
+  color: #1f2020;
+  text-decoration: none;
+  -ms-transform: translateY(-2px);
+  transform: translateY(-2px);
 }
 
 .owl-dots {
@@ -709,12 +781,24 @@ p {
   flex-wrap: wrap;
 }
 
+.sh-card--wrapper.sh-card--wrapper--4 .sh-card--item {
+  width: calc(25% - 24px);
+}
+
+@media screen and (max-width: 767px) {
+  .sh-card--wrapper.sh-card--wrapper--4 .sh-card--item {
+    width: 100%;
+  }
+}
+
 .sh-card--wrapper .sh-card--item {
   width: calc(33% - 24px);
   border: 1px solid rgba(0, 0, 0, 0.05);
+  border-radius: 4px;
   box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.13);
   transition: all 0.3s;
   cursor: pointer;
+  overflow: hidden;
   margin: 0 12px;
 }
 
@@ -735,6 +819,15 @@ p {
 .sh-card--wrapper .sh-card--item img {
   width: 100%;
   height: auto;
+}
+
+.sh-card--wrapper .sh-card--item.sh-card--item-full {
+  width: 100%;
+  margin: 0 0 24px;
+}
+
+.sh-card--wrapper .sh-card--item .sh-list li {
+  margin-bottom: 4px;
 }
 
 .sh-cta--wrapper {
@@ -1842,6 +1935,98 @@ p {
   opacity: 0.5;
 }
 
+.sh-place-banner--wrapper {
+  width: 100%;
+  padding: 90px 32px 64px;
+}
+
+@media screen and (max-width: 991px) {
+  .sh-place-banner--wrapper {
+    padding-right: 0;
+    padding-bottom: 16px;
+    padding-left: 0;
+  }
+}
+
+.sh-place-banner--wrapper img {
+  border-radius: 3px;
+}
+
+.sh-place--section {
+  padding: 64px 0;
+}
+
+@media screen and (max-width: 991px) {
+  .sh-place--section {
+    padding: 40px 0;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .sh-place--section h2 {
+    padding: 0;
+    margin: 0 0 24px;
+  }
+}
+
+.sh-place--section .sh-place--title-svg {
+  position: absolute;
+  left: -88px;
+  top: -96px;
+}
+
+@media screen and (max-width: 1024px) {
+  .sh-place--section .sh-place--title-svg {
+    display: none;
+  }
+}
+
+.sh-place--section .sh-place--desc-svg {
+  margin: 0 96px 0 -96px;
+}
+
+@media screen and (max-width: 1024px) {
+  .sh-place--section .sh-place--desc-svg {
+    display: none;
+  }
+}
+
+.sh-place--section .sh-page--packages .sh-page--package-header {
+  background-color: #848484;
+}
+
+@media screen and (max-width: 991px) {
+  .sh-place--section .sh-page--packages .sh-page--package-item h4 {
+    color: #ffffff;
+    background-color: #1f2020;
+    border-radius: 3px;
+    padding: 16px;
+  }
+}
+
+.sh-place--section .sh-card--wrapper .sh-card--item .sh-card--img {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.sh-place--section .sh-card--wrapper .sh-card--item .sh-card--col {
+  padding: 16px 8px 16px 24px;
+  border-right: thin solid rgba(0, 0, 0, 0.05);
+}
+
+@media screen and (max-width: 991px) {
+  .sh-place--section .sh-card--wrapper .sh-card--item .sh-card--col {
+    padding: 16px 8px;
+    border-right: none;
+    border-bottom: thin solid rgba(0, 0, 0, 0.05);
+  }
+}
+
+.sh-place--section .sh-card--wrapper .sh-card--item .sh-card--col:last-child {
+  border: none !important;
+}
+
 footer {
   background-color: #E5E5E5;
   padding: 64px 0;
@@ -1880,6 +2065,14 @@ body {
 
 body *:focus {
   outline: none;
+}
+
+body a {
+  text-decoration: none;
+}
+
+body a:hover {
+  text-decoration: none;
 }
 
 @media (max-width: 768px) {

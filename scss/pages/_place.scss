@@ -1,0 +1,82 @@
+.sh-place-banner--wrapper {
+  width: 100%;
+  @include padding($navbar-height 32px 64px);
+
+  @include viewport(tablet) {
+    @include padding(null 0 16px);
+  }
+
+  img {
+    border-radius: $border-radius-sm;
+  }
+}
+
+.sh-place--section {
+  @include padding(64px 0);
+
+  @include viewport(tablet) {
+    @include padding(40px 0);
+  }
+
+  h2 {
+    @include viewport(mob) {
+      @include padding(0);
+      @include margin(0 0 24px);
+    }
+  }
+
+  .sh-place--title-svg {
+    position: absolute;
+    left: -88px;
+    top: -96px;
+    @include viewport(tab-min) {
+      display: none;
+    }
+  }
+  .sh-place--desc-svg {
+    @include margin(0 96px 0 -96px);
+    @include viewport(tab-min) {
+      display: none;
+    }
+  }
+
+  .sh-page--packages {
+    .sh-page--package-header {
+      background-color: $sh-color--chrome;
+    }
+    .sh-page--package-item {
+      h4 {
+        @include viewport(tablet) {
+          color: $sh-color--white;
+          background-color: $sh-color--black;
+          border-radius: $border-radius-sm;
+          @include padding(16px);
+        }
+      }
+    }
+  }
+
+  .sh-card--wrapper {
+    .sh-card--item {
+      .sh-card--img {
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+      .sh-card--col {
+        @include padding(16px 8px 16px 24px);
+        border-right: thin solid $sh-color--border;
+
+        @include viewport(tablet) {
+          @include padding(16px 8px);
+          border-right: none;
+          border-bottom: thin solid $sh-color--border;;
+        }
+
+        &:last-child {
+          border: none !important;
+        }
+      }
+    }
+  }
+}

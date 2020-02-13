@@ -24,6 +24,13 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
+.sh--24 {
+  font-size: 24px;
+  @include viewport(mob) {
+    font-size: 20px;
+  }
+}
+
 .sh--20 {
   font-size: 20px;
   @include viewport(mob) {
@@ -72,7 +79,47 @@ p {
   color: $sh-color--white;
 }
 
+.sh--blue {
+  color: $sh-color--blue;
+}
+
 .sh--uppercase {
   text-transform: uppercase;
   letter-spacing: 0.5px;
+}
+
+.sh--strike {
+  text-decoration: line-through;
+}
+
+.sh-list {
+  @include padding(0 0 0 16px);
+  @include margin(0);
+  li {
+      font-weight: $font-weight-normal;
+      color: $sh-color--black;
+      line-height: 1.6;
+      font-size: inherit;
+      @include margin(0 0 8px 8px);
+
+      &:before {
+        display: none;
+      }
+
+      &:last-child {
+        margin-bottom: 0px !important;
+      }
+  }
+}
+
+.sh-list--unordered {
+  li {
+    list-style: disc;
+  }
+}
+
+.sh-list--ordered {
+  li {
+    list-style: decimal;
+  }
 }

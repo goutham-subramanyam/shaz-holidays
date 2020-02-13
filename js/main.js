@@ -12,6 +12,13 @@ if($('.navbar').length) {
   document.onscroll = scroll;
 }
 
+handleDesc = () => {
+  $('.sh-link.d-md-none').removeClass('d-inline-block');
+  $('.sh-link.d-md-none').addClass('d-none');
+  $("#shPlaceDescription").removeClass('d-none d-sm-none');
+  $("#shPlaceDescription").addClass('mt--lg');
+}
+
 $('.owl-carousel').owlCarousel({
   loop: true,
   margin: 10,
