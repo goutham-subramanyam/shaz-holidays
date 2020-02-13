@@ -19,7 +19,7 @@ handleDesc = () => {
   $("#shPlaceDescription").addClass('mt--lg');
 }
 
-$('.owl-carousel').owlCarousel({
+$('#bannerCarousel').owlCarousel({
   loop: true,
   margin: 10,
   responsiveClass: true,
@@ -29,3 +29,28 @@ $('.owl-carousel').owlCarousel({
   autoplayTimeout: 4000,
   autoplaySpeed: 1000
 })
+
+
+var previewCarousel;
+
+previewCarousel = $('#previewCarousel').owlCarousel({
+  loop: true,
+  margin: 10,
+  responsiveClass: true,
+  items: 4,
+  dots: false,
+  nav: true,
+  autoplay: true,
+  autoplayTimeout: 4000,
+  autoplaySpeed: 1000,
+  navText: ["<i class='fa fa-chevron-left'></i>", "<i class='fa fa-chevron-right'></i>"]
+});
+
+previewCarousel.on('changed.owl.carousel', function(e) {
+  const currentImage = $('.owl-stage').children()[e.item.index].children[0].src
+  $("#mainPreview").css('background-image', 'url(' + currentImage + ')');
+});
+
+$("#previewCarousel img").click(function() {
+  $("#mainPreview").css('background-image', 'url(' + $(this)[0].src + ')');
+});

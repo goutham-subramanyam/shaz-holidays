@@ -53,3 +53,11 @@
     transform: translateY(-2px);
   }
 }
+
+.sh--badge {
+  background-color: $sh-color--light-blue;
+  color: $sh-color--white;
+  border-radius: $border-radius-sm;
+  white-space: nowrap;
+  @include padding(4px 16px);
+}

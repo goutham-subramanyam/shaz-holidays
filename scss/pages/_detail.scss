@@ -1,0 +1,82 @@
+.sh-detail--wrapper {
+  width: 100%;
+  @include padding($navbar-height+64px 0 0);
+
+  @include viewport(tablet) {
+    @include padding(null 0 32px);
+  }
+
+  @include viewport(tablet) {
+    .sh-detail--left, .sh-detail--right {
+      border-right: none !important;
+      @include padding(0 8px);
+    }
+    
+    .sh-detail--right {
+      @include padding(32px null null);
+    }
+  }
+
+  .sh-detail--inclusions {
+    svg {
+      @include margin(0 32px 0 0);
+      &.disabled {
+        opacity: 0.3;
+      }
+    }
+  }
+  .sh-detail--preview {
+    #mainPreview {
+      height: 420px;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+    #previewCarousel {
+      position: relative;
+      img {
+        cursor: pointer;
+      }
+      .owl-stage-outer {
+        position: relative;
+        &:after {
+          right: 0;
+          background: linear-gradient(to left, rgba($sh-color--black, 1), transparent);
+        }
+        &:before {
+          left: 0;
+          background: linear-gradient(to right, rgba($sh-color--black, 1), transparent);
+        }
+
+        &:after, &:before {
+          content: '';
+          position: absolute;
+          top: 0;
+          width: 64px;
+          height: 100%;
+          z-index: 1;
+        }
+      }
+      .owl-nav {
+        @include flexbox();
+        @include flex-direction(row);
+        @include justify-content(space-between);
+        @include align-items(center);
+
+        button {
+          color: $sh-color--white;
+          font-size: 24px;
+          z-index: 1;
+          @include margin(-88px 12px 0);
+        }
+      }
+    }
+  }
+}
+
+.sh-detail--section {
+  @include padding(40px 0);
+  @include viewport(tablet) {
+    @include padding(24px 0);
+  }
+}
