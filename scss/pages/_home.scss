@@ -122,6 +122,7 @@
       .sh-place--item {
         width: 100%;
         position: relative;
+        display: block;
         @include margin(0 0 16px);
 
         h3 {

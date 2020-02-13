@@ -498,6 +498,16 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
+.sh--16 {
+  font-size: 16px;
+}
+
+@media screen and (max-width: 767px) {
+  .sh--16 {
+    font-size: 14px;
+  }
+}
+
 .sh--14 {
   font-size: 14px;
 }
@@ -1879,6 +1889,7 @@ p {
 .sh-home--section .sh-place--wrapper .sh-place--column .sh-place--item {
   width: 100%;
   position: relative;
+  display: block;
   margin: 0 0 16px;
 }
 
