@@ -1960,7 +1960,13 @@ p {
 
 .sh-place-banner--wrapper {
   width: 100%;
+  position: relative;
+  min-height: 800px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   padding: 90px 32px 64px;
+  margin: 0 0 64px;
 }
 
 @media screen and (max-width: 991px) {
@@ -1968,6 +1974,13 @@ p {
     padding-right: 0;
     padding-bottom: 16px;
     padding-left: 0;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .sh-place-banner--wrapper {
+    min-height: 400px;
+    margin: 0 0 32px;
   }
 }
 

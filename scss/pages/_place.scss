@@ -1,9 +1,20 @@
 .sh-place-banner--wrapper {
   width: 100%;
+  position: relative;
+  min-height: 800px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   @include padding($navbar-height 32px 64px);
+  @include margin(0 0 64px);
 
   @include viewport(tablet) {
     @include padding(null 0 16px);
+  }
+
+  @include viewport(mob) {
+    min-height: 400px;
+    @include margin(0 0 32px);
   }
 
   img {
