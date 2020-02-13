@@ -67,7 +67,17 @@
           color: $sh-color--white;
           font-size: 24px;
           z-index: 1;
-          @include margin(-88px 12px 0);
+          position: absolute;
+          left: 12px;
+          width: 18px;
+          height: 36px;
+          top: 0;
+          bottom: 0;
+          @include margin(auto 0);
+          &:last-child {
+            left: auto;
+            right: 12px;
+          }
         }
       }
     }
