@@ -1,0 +1,6 @@
+.sh-listing--wrapper {
+  @include padding($navbar-height+48px 0 32px);
+  .sh-place--wrapper {
+    @include margin(0);
+  }
+}
